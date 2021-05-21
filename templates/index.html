@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DL Project</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body class="bg-light">
+        <nav class="navbar navbar-light" style="background-color: #c8e4f8;">
+            <span class="navbar-brand mb-0 h1"><a href="https://tarang-task1.herokuapp.com/">HOME</a></span>
+        </nav>
+        <br><br>
+        <h1 class="text-center">Image Text/Object Recognition</h1>
+        <br>
+        <form class="text-center p-3 container center_div" style="width:50%" action="/" method="POST" enctype="multipart/form-data">
+            <div>            
+                <input class="form-control-file alert alert-secondary" type="file" name="image_file" required>
+            </div>
+            <div>
+                <input class="btn btn-primary mt-3" type="submit" value="Predict Image">
+            </div>
+        </form>
+
+        {% if prediction %}
+            <p class='text-center'>Image is a {{prediction}}</p>
+        {% endif %}
+    </body>
+</html>
+ 
